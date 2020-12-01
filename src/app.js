@@ -7,6 +7,8 @@ const cors = require('cors')
 
 
 const app = express()
+const port=process.env.PORT || 8000
+
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -88,6 +90,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(8000, () => {
-    console.log('Server is up on port 8000.')
+app.listen(port, () => {
+    console.log('Server is up on port.', port)
 })
